@@ -1,26 +1,8 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { Box } from "@chakra-ui/react";
-
-import HeaderComponent from "./components/HeaderComponent";
-import MainComponent from "./components/MainComponent";
-import FooterComponent from "./components/FooterComponent";
-import AboutComponent from "./components/AboutComponent";
-import ContactComponent from "./components/ContactComponent";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
 
 function App() {
-    return (
-        <Router>
-            <HeaderComponent />
-            <Box minHeight="calc(100vh - 200px)" bg="retroGreen.50">
-                <Routes>
-                    <Route path="/" element={<MainComponent />} />
-                    <Route path="/about" element={<AboutComponent />} />
-                    <Route path="/contact" element={<ContactComponent />} />
-                </Routes>
-            </Box>
-            <FooterComponent />
-        </Router>
-    );
+    return <RouterProvider router={router} />;
 }
 
 export default App;
