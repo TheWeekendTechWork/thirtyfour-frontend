@@ -47,7 +47,7 @@ const ContactComponent = () => {
                             boxSize={6}
                             mr={2}
                         />
-                        <Text color="retroGreen.100">+91 9791337757</Text>
+                        <Text color="retroGreen.100">+91 9791347757</Text>
                     </Box>
                     <Box display="flex" alignItems="center">
                         <Icon
