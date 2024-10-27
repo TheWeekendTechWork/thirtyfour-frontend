@@ -1,4 +1,5 @@
-import { createBrowserRouter, Outlet } from "react-router-dom";
+// import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter, Outlet } from "react-router-dom";
 import HeaderComponent from "../components/HeaderComponent";
 import FooterComponent from "../components/FooterComponent";
 import MainComponent from "../components/MainComponent";
@@ -32,7 +33,17 @@ const routes = [
     },
 ];
 
-const router = createBrowserRouter(routes, {
+{
+    /**Uncomment this to use the browser router */
+}
+// const router = createBrowserRouter(routes, {
+//     basename: "/thirtyfour-frontend/",
+// });
+
+{
+    /**Comment this as the hash router is only for routing in github pages*/
+}
+const router = createHashRouter(routes, {
     basename: "/thirtyfour-frontend/",
 });
 
