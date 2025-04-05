@@ -2,9 +2,9 @@
 import { createHashRouter, Outlet } from "react-router-dom";
 import HeaderComponent from "../components/HeaderComponent";
 import FooterComponent from "../components/FooterComponent";
-import MainComponent from "../components/MainComponent";
-import AboutComponent from "../components/AboutComponent";
-import ContactComponent from "../components/ContactComponent";
+import MainComponent from "../pages/MainComponent";
+import AboutComponent from "../pages/AboutComponent";
+import ContactComponent from "../pages/ContactComponent";
 
 const routes = [
     {
