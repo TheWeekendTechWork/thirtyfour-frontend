@@ -19,28 +19,29 @@ A modern full-stack portfolio application built with **React + TypeScript + Chak
 
 \`\`\`
 thirtyfour-frontend/
-├── frontend/              # React + TypeScript frontend
-│   ├── src/
-│   │   ├── assets/       # Theme, resume data (JSON)
-│   │   ├── components/   # Reusable UI components
-│   │   ├── pages/        # Page components
-│   │   ├── router/       # React Router setup
-│   │   └── config.ts     # Environment configuration
-│   └── index.html        # HTML template
-├── backend/              # FastAPI + Python backend
-│   ├── app/
-│   │   ├── routes/       # API routes
-│   │   ├── models/       # Data models & schemas
-│   │   └── config.py     # Configuration & CORS
-│   ├── main.py           # FastAPI entry point
-│   └── requirements.txt  # Python dependencies
-├── render.yaml           # Render deployment config
-└── README.md             # This file
+├── frontend/ # React + TypeScript frontend
+│ ├── src/
+│ │ ├── assets/ # Theme, resume data (JSON)
+│ │ ├── components/ # Reusable UI components
+│ │ ├── pages/ # Page components
+│ │ ├── router/ # React Router setup
+│ │ └── config.ts # Environment configuration
+│ └── index.html # HTML template
+├── backend/ # FastAPI + Python backend
+│ ├── app/
+│ │ ├── routes/ # API routes
+│ │ ├── models/ # Data models & schemas
+│ │ └── config.py # Configuration & CORS
+│ ├── main.py # FastAPI entry point
+│ └── requirements.txt # Python dependencies
+├── render.yaml # Render deployment config
+└── README.md # This file
 \`\`\`
 
 ## 🎨 Tech Stack
 
 ### Frontend
+
 - React 18 + TypeScript
 - Vite 5.4.8
 - Chakra UI 2.10.2
@@ -48,6 +49,7 @@ thirtyfour-frontend/
 - Framer Motion
 
 ### Backend
+
 - FastAPI 0.115
 - Uvicorn 0.32
 - Pydantic 2.9
@@ -56,6 +58,7 @@ thirtyfour-frontend/
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js (v20+)
 - Python (3.11+)
 - Git
@@ -73,7 +76,9 @@ npm install
 **Frontend** (Terminal 1):
 \`\`\`bash
 npm run dev
+
 # → http://localhost:3000
+
 \`\`\`
 
 **Backend** (Terminal 2):
@@ -81,7 +86,9 @@ npm run dev
 cd backend
 source venv/bin/activate
 uvicorn main:app --reload --port 8000
+
 # → http://localhost:8000
+
 \`\`\`
 
 ## 🛠️ Development
@@ -89,21 +96,25 @@ uvicorn main:app --reload --port 8000
 ### Commands
 
 \`\`\`bash
+
 # Frontend
-npm run dev          # Start dev server
-npm run build        # Build for production
-npm run lint         # Run ESLint
+
+npm run dev # Start dev server
+npm run build # Build for production
+npm run lint # Run ESLint
 
 # Backend
+
 cd backend
 source venv/bin/activate
-uvicorn main:app --reload           # Development mode
-pip install <package> && pip freeze > requirements.txt  # Add dependency
+uvicorn main:app --reload # Development mode
+pip install <package> && pip freeze > requirements.txt # Add dependency
 \`\`\`
 
 ### Resume Data
 
 Edit \`frontend/src/assets/resume-data.json\` to update:
+
 - Personal information & contact
 - Work experience
 - Education
@@ -122,6 +133,7 @@ Edit \`frontend/src/assets/resume-data.json\` to update:
    \`\`\`
 
 2. **Deploy on Render**
+
    - Go to [Render Dashboard](https://dashboard.render.com/)
    - Click **New +** → **Blueprint**
    - Connect your GitHub repository
@@ -141,6 +153,7 @@ Edit \`frontend/src/assets/resume-data.json\` to update:
    - See detailed guide: [RENDER-AUTO-DEPLOY.md](./RENDER-AUTO-DEPLOY.md)
 
 Your services will be live at:
+
 - Frontend: \`https://thirtyfour-frontend.onrender.com\`
 - Backend: \`https://thirtyfour-backend.onrender.com\`
 - API Docs: \`https://thirtyfour-backend.onrender.com/docs\`
@@ -150,6 +163,7 @@ Your services will be live at:
 ## 🌍 Custom Domain Setup
 
 ### Domain Structure
+
 - **Frontend**: https://thirty-four.co.in
 - **API**: https://api.thirty-four.co.in
 - **WWW**: https://www.thirty-four.co.in (redirects)
@@ -159,11 +173,13 @@ Your services will be live at:
 #### 1. Add Custom Domains in Render
 
 **Frontend:**
+
 - Render Dashboard → thirtyfour-frontend → Settings → Custom Domain
 - Add: \`thirty-four.co.in\`
 - Copy A and AAAA record values
 
 **Backend:**
+
 - Render Dashboard → thirtyfour-backend → Settings → Custom Domain
 - Add: \`api.thirty-four.co.in\`
 - Copy A and AAAA record values
@@ -176,29 +192,32 @@ Add these records:
 
 **Frontend:**
 \`\`\`
-Type: A Record       | Host: @   | Value: [Render Frontend IPv4]
-Type: AAAA Record    | Host: @   | Value: [Render Frontend IPv6]
+Type: A Record | Host: @ | Value: [Render Frontend IPv4]
+Type: AAAA Record | Host: @ | Value: [Render Frontend IPv6]
 \`\`\`
 
 **Backend API:**
 \`\`\`
-Type: A Record       | Host: api | Value: [Render Backend IPv4]
-Type: AAAA Record    | Host: api | Value: [Render Backend IPv6]
+Type: A Record | Host: api | Value: [Render Backend IPv4]
+Type: AAAA Record | Host: api | Value: [Render Backend IPv6]
 \`\`\`
 
 **WWW (Optional):**
 \`\`\`
-Type: CNAME Record   | Host: www | Value: thirty-four.co.in
+Type: CNAME Record | Host: www | Value: thirty-four.co.in
 \`\`\`
 
 #### 3. Wait for DNS Propagation
 
 \`\`\`bash
+
 # Check DNS (30-60 minutes)
+
 nslookup thirty-four.co.in
 nslookup api.thirty-four.co.in
 
 # Or use: https://dnschecker.org/
+
 \`\`\`
 
 #### 4. SSL Certificates
@@ -222,22 +241,26 @@ nslookup api.thirty-four.co.in
 ## 🐛 Troubleshooting
 
 ### DNS Not Resolving
+
 - Wait 30-60 minutes for propagation
 - Verify IPs match Render dashboard
 - Check: https://dnschecker.org/
 - Clear cache: \`sudo dscacheutil -flushcache\` (macOS)
 
 ### SSL Certificate Issues
+
 - Ensure DNS fully propagated first
 - Check status in Render → Custom Domain section
 - If stuck: remove and re-add domain
 
 ### CORS Errors
+
 - Verify domain in \`backend/app/config.py\` ALLOWED_ORIGINS
 - Redeploy backend after changes
 - Test: \`curl https://api.thirty-four.co.in/health\`
 
 ### Build Failures
+
 - Check logs in Render dashboard
 - Verify dependencies versions
 - Test locally: \`npm run build\` (frontend) or \`pip install -r requirements.txt\` (backend)
@@ -248,6 +271,7 @@ nslookup api.thirty-four.co.in
 - **ReDoc**: http://localhost:8000/redoc
 
 **Endpoints:**
+
 - \`GET /\` - Welcome message
 - \`GET /health\` - Health check
 - \`GET /api/example\` - Example endpoint
@@ -255,13 +279,15 @@ nslookup api.thirty-four.co.in
 ## 🔐 Environment Variables
 
 ### Frontend (\`frontend/src/config.ts\`)
+
 \`\`\`typescript
 apiUrl: import.meta.env.PROD
-  ? "https://api.thirty-four.co.in"
-  : "http://localhost:8000"
+? "https://api.thirty-four.co.in"
+: "http://localhost:8000"
 \`\`\`
 
 ### Backend (\`backend/.env\`)
+
 \`\`\`env
 DEBUG=False
 APP_NAME=ThirtyFour API
@@ -271,6 +297,7 @@ ALLOWED_ORIGINS=https://thirty-four.co.in,https://www.thirty-four.co.in
 ## 📊 Features
 
 ### Frontend
+
 - 🎨 Custom retroGreen theme
 - 📱 Fully responsive
 - ✨ Framer Motion animations
@@ -278,6 +305,7 @@ ALLOWED_ORIGINS=https://thirty-four.co.in,https://www.thirty-four.co.in
 - 🎴 Postcard-style About page
 
 ### Backend
+
 - ⚡ Fast async FastAPI
 - 📝 Auto-generated API docs
 - 🔒 CORS security
@@ -294,6 +322,7 @@ ALLOWED_ORIGINS=https://thirty-four.co.in,https://www.thirty-four.co.in
 ## 👤 Author
 
 **TheWeekendTechWork**
+
 - GitHub: [@TheWeekendTechWork](https://github.com/TheWeekendTechWork)
 - Website: [thirty-four.co.in](https://thirty-four.co.in)
 
