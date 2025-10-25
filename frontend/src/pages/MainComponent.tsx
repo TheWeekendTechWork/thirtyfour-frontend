@@ -14,10 +14,12 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaBookOpen } from "react-icons/fa";
-import { upcomingProjects, ProjectCard } from "../components/cards/ProjectCard";
-import { upcomingStories, StoryCard } from "../components/cards/StoryCard";
+import { ProjectCard } from "../components/cards/ProjectCard";
+import { StoryCard } from "../components/cards/StoryCard";
+import homeData from "../assets/home-data.json";
 
 const MainComponent: React.FC = () => {
+    const { hero, upcomingProjects, upcomingStories } = homeData;
     return (
         <Flex
             direction="column"
@@ -28,7 +30,7 @@ const MainComponent: React.FC = () => {
             <Box
                 bg="retroGreen.900"
                 py={20}
-                backgroundImage="linear-gradient(to bottom, rgba(0, 48, 32, 0.9), rgba(0, 30, 20, 0.95)), url('https://images.unsplash.com/photo-1579713420614-1274eae39ebe?q=80&w=2070')"
+                backgroundImage={`linear-gradient(to bottom, rgba(0, 48, 32, 0.9), rgba(0, 30, 20, 0.95)), url('${hero.backgroundImage}')`}
                 backgroundSize="cover"
                 backgroundPosition="center"
             >
@@ -40,12 +42,10 @@ const MainComponent: React.FC = () => {
                             color="retroGreen.100"
                             fontWeight="bold"
                         >
-                            Welcome to 34
+                            {hero.title}
                         </Heading>
                         <Text fontSize="2xl" color="#FFF" maxW="container.md">
-                            Exploring the intersection of technology,
-                            creativity, and innovation through projects and
-                            insights.
+                            {hero.subtitle}
                         </Text>
                         <Button
                             rightIcon={<ArrowForwardIcon />}
@@ -53,7 +53,7 @@ const MainComponent: React.FC = () => {
                             size="lg"
                             mt={4}
                         >
-                            Explore Projects
+                            {hero.ctaText}
                         </Button>
                     </VStack>
                 </Container>
@@ -68,7 +68,7 @@ const MainComponent: React.FC = () => {
                         color="retroGreen.100"
                         textAlign="center"
                     >
-                        Upcoming Projects
+                        {upcomingProjects.sectionTitle}
                     </Heading>
                     <Text
                         fontSize="xl"
@@ -77,8 +77,7 @@ const MainComponent: React.FC = () => {
                         maxW="container.md"
                         mx="auto"
                     >
-                        A glimpse into what I'm currently working on and
-                        planning to launch soon.
+                        {upcomingProjects.sectionDescription}
                     </Text>
 
                     <Grid
@@ -91,7 +90,7 @@ const MainComponent: React.FC = () => {
                         gap={8}
                         width="100%"
                     >
-                        {upcomingProjects.map((project) => (
+                        {upcomingProjects.projects.map((project) => (
                             <GridItem key={project.id}>
                                 <ProjectCard project={project} />
                             </GridItem>
@@ -109,7 +108,7 @@ const MainComponent: React.FC = () => {
                         color="retroGreen.100"
                         textAlign="center"
                     >
-                        Upcoming Stories
+                        {upcomingStories.sectionTitle}
                     </Heading>
                     <Text
                         fontSize="xl"
@@ -118,12 +117,11 @@ const MainComponent: React.FC = () => {
                         maxW="container.md"
                         mx="auto"
                     >
-                        Dive into captivating narratives that blend technology
-                        with creative storytelling.
+                        {upcomingStories.sectionDescription}
                     </Text>
 
                     <VStack spacing={8} width="100%">
-                        {upcomingStories.map((story) => (
+                        {upcomingStories.stories.map((story) => (
                             <StoryCard key={story.id} story={story} />
                         ))}
                     </VStack>
@@ -135,28 +133,10 @@ const MainComponent: React.FC = () => {
                         mt={4}
                         rightIcon={<Icon as={FaBookOpen} />}
                     >
-                        Explore All Stories
+                        {upcomingStories.ctaText}
                     </Button>
                 </VStack>
             </Container>
-
-            {/* Newsletter Section */}
-            <Box bg="retroGreen.700" py={16} mt={16}>
-                <Container maxW="container.md" textAlign="center">
-                    <VStack spacing={6}>
-                        <Heading as="h2" size="xl" color="retroGreen.100">
-                            Stay Updated
-                        </Heading>
-                        <Text color="#FFF" fontSize="lg">
-                            Subscribe to get notified when new projects, blogs,
-                            and stories are published.
-                        </Text>
-                        <Button colorScheme="teal" size="lg" mt={4}>
-                            Subscribe Now
-                        </Button>
-                    </VStack>
-                </Container>
-            </Box>
         </Flex>
     );
 };

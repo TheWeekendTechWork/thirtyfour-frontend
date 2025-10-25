@@ -9,46 +9,18 @@ import {
 } from "@chakra-ui/react";
 import { FaClock, FaBookOpen } from "react-icons/fa";
 
-export // Sample data for stories
-const upcomingStories = [
-    {
-        id: 1,
-        title: "The Digital Nomad",
-        excerpt:
-            "A journey through remote work culture and the freedom of location independence.",
-        genre: "Tech Lifestyle",
-        readTime: "15 min read",
-        releaseDate: "Coming Dec 2023",
-        coverImage:
-            "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?q=80&w=500&auto=format&fit=crop",
-    },
-    {
-        id: 2,
-        title: "Artificial Dreams",
-        excerpt:
-            "A speculative fiction exploring the boundaries between human consciousness and artificial intelligence.",
-        genre: "Sci-Fi",
-        readTime: "20 min read",
-        releaseDate: "Coming Jan 2024",
-        coverImage:
-            "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=500&auto=format&fit=crop",
-    },
-    {
-        id: 3,
-        title: "The Open Source Revolution",
-        excerpt:
-            "How collaborative development is changing the world one commit at a time.",
-        genre: "Tech History",
-        readTime: "12 min read",
-        releaseDate: "Coming Feb 2024",
-        coverImage:
-            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=500&auto=format&fit=crop",
-    },
-];
+// Type definition for Story
+export interface Story {
+    id: number;
+    title: string;
+    excerpt: string;
+    genre: string;
+    readTime: string;
+    releaseDate: string;
+    coverImage: string;
+}
 
-export const StoryCard: React.FC<{ story: (typeof upcomingStories)[0] }> = ({
-    story,
-}) => {
+export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
     return (
         <Box
             borderRadius="lg"

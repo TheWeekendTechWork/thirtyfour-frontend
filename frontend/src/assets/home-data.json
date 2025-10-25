@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "title": "Welcome to 34",
+    "subtitle": "Exploring the intersection of technology, creativity, and innovation through projects and insights.",
+    "backgroundImage": "https://images.unsplash.com/photo-1579713420614-1274eae39ebe?q=80&w=2070",
+    "ctaText": "Explore Projects",
+    "ctaLink": "#/projects"
+  },
+  "upcomingProjects": {
+    "sectionTitle": "Upcoming Projects",
+    "sectionDescription": "A glimpse into what I'm currently working on and planning to launch soon.",
+    "projects": [
+      {
+        "id": 1,
+        "title": "AI-Powered Content Generator",
+        "description": "A tool that uses machine learning to generate high-quality content for various purposes.",
+        "tags": ["Python", "Machine Learning", "React"],
+        "imageUrl": "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=500&auto=format&fit=crop",
+        "status": "In Progress"
+      },
+      {
+        "id": 2,
+        "title": "Smart Home Dashboard",
+        "description": "A centralized dashboard to control and monitor all your smart home devices.",
+        "tags": ["IoT", "React", "Node.js"],
+        "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=500&auto=format&fit=crop",
+        "status": "Planning"
+      },
+      {
+        "id": 3,
+        "title": "Sustainable Living App",
+        "description": "Track and reduce your carbon footprint with personalized recommendations.",
+        "tags": ["React Native", "MongoDB", "Express"],
+        "imageUrl": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=500&auto=format&fit=crop",
+        "status": "Coming Soon"
+      }
+    ]
+  },
+  "upcomingStories": {
+    "sectionTitle": "Upcoming Stories",
+    "sectionDescription": "Dive into captivating narratives that blend technology with creative storytelling.",
+    "ctaText": "Explore All Stories",
+    "stories": [
+      {
+        "id": 1,
+        "title": "The Digital Nomad",
+        "excerpt": "A journey through remote work culture and the freedom of location independence.",
+        "genre": "Tech Lifestyle",
+        "readTime": "15 min read",
+        "releaseDate": "Coming Dec 2023",
+        "coverImage": "https://images.unsplash.com/photo-1605647540924-852290f6b0d5?q=80&w=500&auto=format&fit=crop"
+      },
+      {
+        "id": 2,
+        "title": "Artificial Dreams",
+        "excerpt": "A speculative fiction exploring the boundaries between human consciousness and artificial intelligence.",
+        "genre": "Sci-Fi",
+        "readTime": "20 min read",
+        "releaseDate": "Coming Jan 2024",
+        "coverImage": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=500&auto=format&fit=crop"
+      },
+      {
+        "id": 3,
+        "title": "The Open Source Revolution",
+        "excerpt": "How collaborative development is changing the world one commit at a time.",
+        "genre": "Tech History",
+        "readTime": "12 min read",
+        "releaseDate": "Coming Feb 2024",
+        "coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=500&auto=format&fit=crop"
+      }
+    ]
+  }
+}
