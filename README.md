@@ -112,9 +112,9 @@ Edit \`frontend/src/assets/resume-data.json\` to update:
 
 ## 🚀 Deployment to Render
 
-### Using Blueprint (Recommended)
+### Using Blueprint with Auto-Deploy (Recommended)
 
-1. **Push to GitHub**
+1. **Push to GitHub** (Already Done! ✅)
    \`\`\`bash
    git add .
    git commit -m "Deploy to Render"
@@ -133,6 +133,12 @@ Edit \`frontend/src/assets/resume-data.json\` to update:
    ALLOWED_ORIGINS=https://thirty-four.co.in,https://www.thirty-four.co.in
    DEBUG=False
    \`\`\`
+
+4. **Auto-Deploy is Active!** 🎉
+   - Every push to \`main\` branch automatically deploys
+   - Deployment takes ~3-5 minutes
+   - Monitor progress in Render Dashboard
+   - See detailed guide: [RENDER-AUTO-DEPLOY.md](./RENDER-AUTO-DEPLOY.md)
 
 Your services will be live at:
 - Frontend: \`https://thirtyfour-frontend.onrender.com\`
