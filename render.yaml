@@ -10,12 +10,12 @@ services:
         value: 3.11.0
     healthCheckPath: /health
 
-  # React Frontend (Web Service with SPA support)
+  # React Frontend (Static Site - use Dashboard Rewrite Rule for SPA routing)
   - type: web
     name: thirtyfour-frontend
-    runtime: node
-    buildCommand: npm ci && npm run build && npm install -g serve
-    startCommand: serve -s dist -l $PORT
+    runtime: static
+    buildCommand: npm ci --omit=dev && npm run build
+    staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
