@@ -120,11 +120,22 @@ const MainComponent: React.FC = () => {
                         {upcomingStories.sectionDescription}
                     </Text>
 
-                    <VStack spacing={8} width="100%">
+                    <Grid
+                        templateColumns={[
+                            "1fr",
+                            "1fr",
+                            "repeat(2, 1fr)",
+                            "repeat(3, 1fr)",
+                        ]}
+                        gap={8}
+                        width="100%"
+                    >
                         {upcomingStories.stories.map((story) => (
-                            <StoryCard key={story.id} story={story} />
+                            <GridItem key={story.id}>
+                                <StoryCard story={story} />
+                            </GridItem>
                         ))}
-                    </VStack>
+                    </Grid>
 
                     <Button
                         variant="outline"

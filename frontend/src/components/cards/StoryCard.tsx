@@ -30,14 +30,14 @@ export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
             _hover={{ transform: "translateY(-5px)" }}
             boxShadow="md"
             display="flex"
-            flexDirection={["column", "column", "row"]}
-            height={["auto", "auto", "220px"]}
+            flexDirection="column"
+            height="100%"
         >
             <Image
                 src={story.coverImage}
                 alt={story.title}
-                width={["100%", "100%", "200px"]}
-                height={["200px", "200px", "100%"]}
+                width="100%"
+                height="200px"
                 objectFit="cover"
             />
             <Box
@@ -48,7 +48,7 @@ export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
                 justifyContent="space-between"
             >
                 <Box>
-                    <HStack mb={2}>
+                    <HStack mb={2} flexWrap="wrap">
                         <Badge colorScheme="orange">{story.genre}</Badge>
                         <HStack spacing={1} color="retroGreen.200">
                             <Icon as={FaClock} />
@@ -58,16 +58,16 @@ export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
                     <Heading as="h3" size="md" mb={2} color="retroGreen.100">
                         {story.title}
                     </Heading>
-                    <Text color="#FFF" mb={4}>
+                    <Text color="#FFF" mb={4} noOfLines={3}>
                         {story.excerpt}
                     </Text>
                 </Box>
-                <HStack justify="space-between" color="retroGreen.200">
+                <HStack justify="space-between" color="retroGreen.200" fontSize="sm">
                     <HStack>
                         <Icon as={FaBookOpen} />
-                        <Text fontSize="sm">Coming soon</Text>
+                        <Text>Coming soon</Text>
                     </HStack>
-                    <Text fontSize="sm">{story.releaseDate}</Text>
+                    <Text>{story.releaseDate}</Text>
                 </HStack>
             </Box>
         </Box>
