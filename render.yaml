@@ -10,18 +10,14 @@ services:
         value: 3.11.0
     healthCheckPath: /health
 
-  # React Frontend (Static Site)
+  # React Frontend (Web Service with SPA support)
   - type: web
     name: thirtyfour-frontend
     runtime: node
-    buildCommand: npm ci --omit=dev && npm run build
-    staticPublishPath: ./dist
+    buildCommand: npm ci && npm run build && npm install -g serve
+    startCommand: serve -s dist -l $PORT
     envVars:
       - key: NODE_VERSION
         value: 20.18.0
       - key: NODE_ENV
         value: production
-    routes:
-      - type: rewrite
-        source: /api/*
-        destination: https://api.thirty-four.co.in/api/*
