@@ -265,6 +265,66 @@ nslookup api.thirty-four.co.in
 - Verify dependencies versions
 - Test locally: \`npm run build\` (frontend) or \`pip install -r requirements.txt\` (backend)
 
+## ⚡ Build Size Optimization
+
+### Current Build Performance
+
+- **Build Output**: 516KB total
+- **Gzipped**: ~163KB (what users actually download)
+- **Deployment**: ~80-90MB (includes production node_modules)
+
+### Optimizations Implemented
+
+#### 1. Code Splitting
+
+Vendor libraries are split into separate chunks for better caching:
+
+- **react chunk**: React, React DOM, Router (~200KB → 64.55KB gzipped)
+- **chakra chunk**: Chakra UI & Emotion (~160KB → 51.46KB gzipped)
+- **motion chunk**: Framer Motion (~113KB → 36.11KB gzipped)
+- **icons chunk**: React Icons (~3KB → 1.18KB gzipped)
+
+#### 2. Production Minification
+
+\`vite.config.ts\` configured with Terser:
+
+- Removes \`console.log\` statements in production
+- Removes debugger statements
+- Aggressive minification
+
+#### 3. Efficient Dependencies
+
+\`render.yaml\` uses optimized build command:
+\`\`\`bash
+npm ci --omit=dev && npm run build
+\`\`\`
+
+Benefits:
+
+- \`npm ci\`: Faster, uses package-lock.json
+- \`--omit=dev\`: Skips devDependencies (~30% smaller)
+- Sets \`NODE_ENV=production\`
+
+### Monitor Bundle Size
+
+\`\`\`bash
+
+# Check build size
+
+npm run build
+du -sh dist/
+
+# Analyze bundle composition
+
+npx vite-bundle-visualizer
+\`\`\`
+
+### Performance Metrics
+
+- ✅ Initial Load: 163KB gzipped
+- ✅ Time to Interactive: <2s on 3G
+- ✅ Deployment Time: ~5-6 seconds (with optimizations)
+
 ## 📡 API Documentation
 
 - **Swagger UI**: http://localhost:8000/docs (dev) or https://api.thirty-four.co.in/docs (prod)

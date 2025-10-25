@@ -1,0 +1,51 @@
+# Files to ignore during Render deployment
+# This reduces the deployment package size
+
+# Development files
+*.md
+!README.md
+.github/
+.vscode/
+.idea/
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+__tests__/
+coverage/
+
+# Documentation
+docs/
+*.md
+RENDER-AUTO-DEPLOY.md
+
+# Build artifacts (will be rebuilt)
+dist/
+.cache/
+.temp/
+
+# Development scripts
+start.sh
+start-frontend.sh
+start-backend.sh
+
+# Git files
+.git/
+.gitignore
+.gitattributes
+
+# Editor files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Backend (not needed for frontend static site)
+# Uncomment if deploying only frontend:
+# backend/

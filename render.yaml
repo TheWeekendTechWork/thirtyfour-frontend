@@ -14,11 +14,13 @@ services:
   - type: web
     name: thirtyfour-frontend
     runtime: node
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci --omit=dev && npm run build
     staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
         value: 20.11.0
+      - key: NODE_ENV
+        value: production
     routes:
       - type: rewrite
         source: /api/*
