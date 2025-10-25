@@ -1,0 +1,133 @@
+{
+  "personalInfo": {
+    "name": "Jairam B",
+    "title": "Senior Technical Consultant",
+    "tagline": "Backend Developer | Data Engineer | DevOps",
+    "profileImage": "https://media.licdn.com/dms/image/v2/D4D03AQH4DMyiF2cgkw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684482534737?e=1762992000&v=beta&t=w5phinOz6N_Y0VhmqEMla48bqbAYyF_vcZooxiqYLDs",
+    "contact": {
+      "email": "b.jairam0512@gmail.com",
+      "phone": "+91 9597341717",
+      "location": "Bangalore, India",
+      "linkedin": "https://linkedin.com/in/jairamjavv",
+      "github": "https://github.com/jairamjavv"
+    }
+  },
+  "summary": "Experienced Full Stack Developer with over 4 years of expertise in designing and implementing scalable applications using Python, JavaScript, and modern frameworks. Proficient in cloud platforms, DevOps practices, and microservices architecture. Strong problem-solving skills with a track record of delivering high-quality solutions for enterprise clients.",
+  "workExperience": [
+    {
+      "id": 1,
+      "title": "Senior Technical Consultant",
+      "company": "Ernst & Young Global Delivery Services (EY GDS)",
+      "duration": "April 2025 - Present",
+      "description": "Leading technical initiatives and architecting enterprise solutions",
+      "achievements": [
+        "Leading development of scalable microservices architecture using Python, FastAPI, and Node.js",
+        "Architecting cloud-native solutions on Azure and AWS with focus on performance optimization",
+        "Implementing CI/CD pipelines and DevOps best practices using Docker, Kubernetes, and Jenkins",
+        "Mentoring junior developers and conducting technical code reviews"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Full Stack Developer",
+      "company": "Mercedes Benz Research & Development India (MBRDI)",
+      "duration": "Aug 2023 - April 2025",
+      "description": "Developed critical backend systems and microservices",
+      "achievements": [
+        "Designed and deployed RESTful APIs using Python (FastAPI/Flask) and Node.js (Express.js), reducing API response time by 40%",
+        "Implemented microservices architecture with Docker and Kubernetes, improving system scalability and deployment efficiency",
+        "Developed responsive front-end applications using React, Redux, and Material UI",
+        "Optimized PostgreSQL and MongoDB database queries, improving data retrieval by 35%",
+        "Automated deployment workflows with CI/CD pipelines (Jenkins, GitLab CI), reducing release cycles by 50%"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Graduate Technical Intern",
+      "company": "Intel Technology India Pvt. Ltd",
+      "duration": "Sep 2022 - May 2023",
+      "description": "Research and development in cloud infrastructure",
+      "achievements": [
+        "Contributed to development of cloud infrastructure automation tools using Python and Ansible",
+        "Designed data visualization dashboards using React and Chart.js for real-time monitoring",
+        "Implemented unit and integration tests to ensure code quality and reliability"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Associate Software Engineer",
+      "company": "Accenture India Pvt. Ltd",
+      "duration": "Aug 2019 - Jun 2021",
+      "description": "Full stack development and maintenance",
+      "achievements": [
+        "Developed and maintained web applications using Java (Spring Boot), JavaScript, and Angular",
+        "Collaborated with cross-functional teams following Agile methodologies",
+        "Worked on database management with MySQL and PostgreSQL",
+        "Participated in code reviews and provided constructive feedback to team members"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "degree": "Master of Technology",
+      "institution": "VIT University, Vellore",
+      "duration": "2021 - 2023",
+      "field": "Software Engineering",
+      "cgpa": "8.8/10"
+    },
+    {
+      "id": 2,
+      "degree": "Bachelor of Technology",
+      "institution": "SRM University, Chennai",
+      "duration": "2015 - 2019",
+      "field": "Computer Science and Engineering",
+      "cgpa": "7.6/10"
+    }
+  ],
+  "skills": {
+    "programming": ["Python", "JavaScript", "Java", "TypeScript"],
+    "backend": ["FastAPI", "Flask", "Django", "Node.js", "Express.js", "Spring Boot", "REST API", "GraphQL"],
+    "frontend": ["HTML5", "CSS3", "React", "Redux", "Angular", "Material UI", "Chakra UI"],
+    "database": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
+    "devops": ["Git", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Ansible", "Helm Charts"],
+    "cloud": ["Azure", "AWS", "GCP", "OpenShift"],
+    "other": ["Linux", "Agile/Scrum"]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Hybrid Video Encryption Using AES and RSA",
+      "description": "Developed a secure video encryption system combining AES and RSA algorithms for enhanced data protection and efficient key management.",
+      "technologies": ["Python", "Cryptography", "Security"]
+    },
+    {
+      "id": 2,
+      "name": "Python Automation Script",
+      "description": "Created automation scripts to streamline repetitive tasks, improving team productivity and reducing manual effort by 60%.",
+      "technologies": ["Python", "Automation", "Scripting"]
+    }
+  ],
+  "hobbies": [
+    {
+      "id": 1,
+      "icon": "🎵",
+      "name": "Music Production & DJing"
+    },
+    {
+      "id": 2,
+      "icon": "📚",
+      "name": "Reading Tech Blogs"
+    },
+    {
+      "id": 3,
+      "icon": "🏃",
+      "name": "Fitness & Running"
+    },
+    {
+      "id": 4,
+      "icon": "🌍",
+      "name": "Traveling & Photography"
+    }
+  ]
+}

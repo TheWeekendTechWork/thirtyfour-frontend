@@ -14,10 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaBookOpen } from "react-icons/fa";
-import {
-    upcomingBlogs,
-    BlogPreview,
-} from "../components/cards/BlogPreviewCard";
 import { upcomingProjects, ProjectCard } from "../components/cards/ProjectCard";
 import { upcomingStories, StoryCard } from "../components/cards/StoryCard";
 
@@ -101,56 +97,6 @@ const MainComponent: React.FC = () => {
                             </GridItem>
                         ))}
                     </Grid>
-                </VStack>
-
-                <Divider my={16} borderColor="retroGreen.600" />
-
-                {/* Blog Section */}
-                <VStack spacing={12} mb={20}>
-                    <Heading
-                        as="h2"
-                        size="2xl"
-                        color="retroGreen.100"
-                        textAlign="center"
-                    >
-                        Upcoming Blog Posts
-                    </Heading>
-                    <Text
-                        fontSize="xl"
-                        color="#FFF"
-                        textAlign="center"
-                        maxW="container.md"
-                        mx="auto"
-                    >
-                        Stay tuned for insightful articles on technology,
-                        development, and more.
-                    </Text>
-
-                    <Grid
-                        templateColumns={[
-                            "1fr",
-                            "1fr",
-                            "repeat(2, 1fr)",
-                            "repeat(3, 1fr)",
-                        ]}
-                        gap={8}
-                        width="100%"
-                    >
-                        {upcomingBlogs.map((blog) => (
-                            <GridItem key={blog.id}>
-                                <BlogPreview blog={blog} />
-                            </GridItem>
-                        ))}
-                    </Grid>
-
-                    <Button
-                        variant="outline"
-                        colorScheme="teal"
-                        size="lg"
-                        mt={4}
-                    >
-                        View All Posts
-                    </Button>
                 </VStack>
 
                 <Divider my={16} borderColor="retroGreen.600" />

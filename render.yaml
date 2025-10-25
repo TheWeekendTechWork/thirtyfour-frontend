@@ -1,0 +1,25 @@
+services:
+  # FastAPI Backend
+  - type: web
+    name: thirtyfour-backend
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /health
+
+  # React Frontend (Static Site)
+  - type: web
+    name: thirtyfour-frontend
+    runtime: node
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://api.thirty-four.co.in/api/*
