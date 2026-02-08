@@ -15,18 +15,24 @@ export interface Story {
     readTime: string;
     releaseDate: string;
     coverImage: string;
+    url?: string;
 }
 
 export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
     return (
         <Box
+            as={story.url ? "a" : "div"}
+            // @ts-expect-error: href is valid when as="a"
+            href={story.url}
+            target={story.url ? "_blank" : undefined}
+            rel={story.url ? "noopener noreferrer" : undefined}
             bg="retroGreen.100"
             border="2px solid"
             borderColor="retroGreen.800"
             borderRadius="20px"
             p={6}
             transition="all 0.2s ease-out"
-            cursor="pointer"
+            cursor={story.url ? "pointer" : "default"}
             _hover={{
                 transform: "translateY(-8px) scale(1.02)",
                 boxShadow: "12px 12px 0",

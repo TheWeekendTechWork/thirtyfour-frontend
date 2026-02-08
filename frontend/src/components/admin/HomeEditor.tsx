@@ -40,7 +40,8 @@ const HomeEditor = ({ data, setData }: HomeEditorProps) => {
             description: "",
             tags: [],
             imageUrl: "",
-            status: "Planning"
+            status: "Planning",
+            url: ""
         });
         setData(newData);
     };
@@ -56,7 +57,8 @@ const HomeEditor = ({ data, setData }: HomeEditorProps) => {
             genre: "",
             readTime: "",
             releaseDate: "",
-            coverImage: ""
+            coverImage: "",
+            url: ""
         });
         setData(newData);
     };
@@ -134,6 +136,16 @@ const HomeEditor = ({ data, setData }: HomeEditorProps) => {
                                             />
                                         </FormControl>
                                     </SimpleGrid>
+                                    <FormControl>
+                                        <FormLabel color="retroGreen.300" fontSize="sm">Project URL</FormLabel>
+                                        <Input
+                                            value={project.url || ""}
+                                            onChange={(e) => handleChange("upcomingProjects", index, "url", e.target.value)}
+                                            color="retroGreen.100"
+                                            borderColor="retroGreen.500"
+                                            placeholder="https://..."
+                                        />
+                                    </FormControl>
                                 </VStack>
                             </AccordionPanel>
                         </AccordionItem>
@@ -216,6 +228,16 @@ const HomeEditor = ({ data, setData }: HomeEditorProps) => {
                                             />
                                         </FormControl>
                                     </SimpleGrid>
+                                    <FormControl>
+                                        <FormLabel color="retroGreen.300" fontSize="sm">Story URL</FormLabel>
+                                        <Input
+                                            value={story.url || ""}
+                                            onChange={(e) => handleChange("upcomingStories", index, "url", e.target.value)}
+                                            color="retroGreen.100"
+                                            borderColor="retroGreen.500"
+                                            placeholder="https://..."
+                                        />
+                                    </FormControl>
                                 </VStack>
                             </AccordionPanel>
                         </AccordionItem>

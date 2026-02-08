@@ -21,7 +21,8 @@
           "React"
         ],
         "imageUrl": "https://plus.unsplash.com/premium_photo-1679957333039-285fb913aa2b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=963",
-        "status": "In Progress"
+        "status": "In Progress",
+        "url": ""
       },
       {
         "id": 2,
@@ -32,7 +33,8 @@
           "FasAPI"
         ],
         "imageUrl": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3139",
-        "status": "Planning"
+        "status": "Planning",
+        "url": ""
       },
       {
         "id": 3,
@@ -43,7 +45,8 @@
           "Unknown"
         ],
         "imageUrl": "https://plus.unsplash.com/premium_photo-1678103472974-a6435884b194?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064",
-        "status": "Coming Soon"
+        "status": "Coming Soon",
+        "url": ""
       }
     ]
   },
@@ -59,7 +62,8 @@
         "genre": "Thriller",
         "readTime": "15 min read",
         "releaseDate": "Coming Dec 2025",
-        "coverImage": "https://images.unsplash.com/photo-1572885972991-8eece633dae8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987"
+        "coverImage": "https://images.unsplash.com/photo-1572885972991-8eece633dae8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987",
+        "url": ""
       },
       {
         "id": 2,
@@ -68,7 +72,8 @@
         "genre": "Urban Drama and Adventure",
         "readTime": "T.B.D",
         "releaseDate": "Coming Feb 2026",
-        "coverImage": "https://images.unsplash.com/photo-1644540959029-56e104346f6c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
+        "coverImage": "https://images.unsplash.com/photo-1644540959029-56e104346f6c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+        "url": ""
       },
       {
         "id": 3,
@@ -77,7 +82,8 @@
         "genre": "Will Update soon.",
         "readTime": "T.B.D",
         "releaseDate": "Coming April 2026",
-        "coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=500&auto=format&fit=crop"
+        "coverImage": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=500&auto=format&fit=crop",
+        "url": ""
       },
       {
         "id": 4,
@@ -86,7 +92,8 @@
         "genre": "Will Update soon.",
         "readTime": "T.B.D",
         "releaseDate": "Coming Dec 2026",
-        "coverImage": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070"
+        "coverImage": "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+        "url": ""
       }
     ]
   }

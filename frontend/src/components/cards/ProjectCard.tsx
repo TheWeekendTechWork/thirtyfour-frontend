@@ -8,18 +8,25 @@ export interface Project {
     tags: string[];
     imageUrl: string;
     status: string;
+    url?: string;
 }
 
 export const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     return (
         <Box
+            as={project.url ? "a" : "div"}
+            // @ts-expect-error: href is valid when as="a"
+            href={project.url}
+            target={project.url ? "_blank" : undefined}
+            rel={project.url ? "noopener noreferrer" : undefined}
+            display="block"
             bg="retroGreen.100"
             border="2px solid"
             borderColor="retroGreen.800"
             p={6}
             borderRadius="20px"
             transition="all 0.2s ease-out"
-            cursor="pointer"
+            cursor={project.url ? "pointer" : "default"}
             role="group"
             _hover={{
                 transform: "translateY(-8px) scale(1.02)",
