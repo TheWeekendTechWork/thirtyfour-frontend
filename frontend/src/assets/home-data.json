@@ -4,7 +4,7 @@
     "subtitle": "Exploring the intersection of technology, creativity, and innovation through projects and insights.",
     "backgroundImage": "https://images.unsplash.com/photo-1579713420614-1274eae39ebe?q=80&w=2070",
     "ctaText": "Explore Projects",
-    "ctaLink": "#/projects"
+    "ctaLink": "/projects"
   },
   "upcomingProjects": {
     "sectionTitle": "My Projects",

@@ -1,4 +1,4 @@
-import { createHashRouter, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 // import App from "../App";
 import AboutComponent from "../pages/AboutComponent";
 import ContactComponent from "../pages/ContactComponent";
@@ -9,8 +9,9 @@ import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
 import AdminLogin from "../pages/AdminLogin";
 import AdminDashboard from "../pages/AdminDashboard";
+import NotFound from "../pages/NotFound";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
     {
         // path: "/",
         // element: <App />,
@@ -52,6 +53,10 @@ const router = createHashRouter([
     {
         path: "/admin/dashboard",
         element: <AdminDashboard />,
+    },
+    {
+        path: "*",
+        element: <NotFound />,
     }
 ]);
 
