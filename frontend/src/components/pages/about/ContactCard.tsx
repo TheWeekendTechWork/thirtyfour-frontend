@@ -20,8 +20,8 @@ interface ContactCardProps {
         name: string;
         title: string;
         tagline: string;
-        profileImages: string[];
-        altProfileImage: string;
+        profileImages?: string[];
+        altProfileImage?: string;
         contact: {
             email: string;
             phone: string;
@@ -39,6 +39,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
     useEffect(() => {
         if (personalInfo.profileImages && personalInfo.profileImages.length > 1) {
             const interval = setInterval(() => {
+                // @ts-ignore
                 setCurrentImageIndex((prev) => (prev + 1) % personalInfo.profileImages.length);
             }, 2000); // Cycle every 2 seconds for visibility
             return () => clearInterval(interval);
@@ -46,8 +47,8 @@ const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
     }, [personalInfo.profileImages]);
 
     const currentImage = isHovered
-        ? personalInfo.altProfileImage
-        : personalInfo.profileImages[currentImageIndex];
+        ? (personalInfo.altProfileImage || personalInfo.profileImages?.[0] || (personalInfo as any).profileImage)
+        : (personalInfo.profileImages?.[currentImageIndex] || (personalInfo as any).profileImage);
 
     return (
         <MotionCard
