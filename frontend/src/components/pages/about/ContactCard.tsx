@@ -85,7 +85,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
                     letterSpacing="wider"
                     fontFamily="'Press Start 2P', cursive"
                 >
-                    CONTACT_ID: #001
+                    CONTACT_ID: #0034
                 </Text>
 
                 <VStack spacing={5} align="center" mt={8}>
