@@ -15,13 +15,16 @@ import {
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import MotionCard from "./MotionCard";
 
+import profileImage1 from '/images/jairam-profile-picture.jpeg';
+import profileImage2 from '/images/jairam-profile-picturee.jpeg';
+import altProfileImage from '/images/jairam-alt-avatar.jpeg';
+
 interface ContactCardProps {
     personalInfo: {
         name: string;
         title: string;
         tagline: string;
-        profileImages?: string[];
-        altProfileImage?: string;
+        // Images are now handled internally
         contact: {
             email: string;
             phone: string;
@@ -36,19 +39,18 @@ const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
+    const profileImages = [profileImage1, profileImage2];
+
     useEffect(() => {
-        if (personalInfo.profileImages && personalInfo.profileImages.length > 1) {
-            const interval = setInterval(() => {
-                // @ts-ignore
-                setCurrentImageIndex((prev) => (prev + 1) % personalInfo.profileImages.length);
-            }, 2000); // Cycle every 2 seconds for visibility
-            return () => clearInterval(interval);
-        }
-    }, [personalInfo.profileImages]);
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % profileImages.length);
+        }, 2000); // Cycle every 2 seconds for visibility
+        return () => clearInterval(interval);
+    }, []);
 
     const currentImage = isHovered
-        ? (personalInfo.altProfileImage || personalInfo.profileImages?.[0] || (personalInfo as any).profileImage)
-        : (personalInfo.profileImages?.[currentImageIndex] || (personalInfo as any).profileImage);
+        ? altProfileImage
+        : profileImages[currentImageIndex];
 
     return (
         <MotionCard

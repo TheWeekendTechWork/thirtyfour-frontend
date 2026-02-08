@@ -14,7 +14,20 @@ import KeyProjects from "../components/pages/about/KeyProjects";
 import Hobbies from "../components/pages/about/Hobbies";
 
 const AboutComponent = () => {
-    const { resumeData } = useData();
+    const { resumeData, loading } = useData();
+
+    if (loading) {
+        return <Box minH="100vh" bg="retroGreen.800" />;
+    }
+
+    if (!resumeData || !resumeData.personalInfo) {
+        return (
+            <Box minH="100vh" bg="retroGreen.800" py={12} color="retroGreen.100" textAlign="center" fontFamily="'Courier New', monospace">
+                Resume data unavailable.
+            </Box>
+        );
+    }
+
     const { personalInfo, summary, workExperience, education, skills, projects, hobbies } = resumeData;
 
     return (

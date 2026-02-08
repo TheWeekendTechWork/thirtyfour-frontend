@@ -3,11 +3,6 @@
     "name": "Jairam B",
     "title": "Senior Technical Consultant",
     "tagline": "Backend Developer | Data Engineer | DevOps",
-    "profileImages": [
-      "/images/jairam-profile-picture.jpeg",
-      "/images/jairam-profile-picturee.jpeg"
-    ],
-    "altProfileImage": "/images/jairam-alt-avatar.jpeg",
     "contact": {
       "email": "b.jairam0512@gmail.com",
       "phone": "+91 9597341717",
