@@ -60,7 +60,7 @@ const AdminDashboard = () => {
 
         try {
             // Save Home Data
-            const homeResponse = await fetch('http://localhost:3001/api/save/home-data', {
+            const homeResponse = await fetch('/api/save/home-data', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(homeData)
@@ -69,7 +69,7 @@ const AdminDashboard = () => {
             if (!homeResponse.ok) throw new Error('Failed to save Home Data');
 
             // Save Resume Data
-            const resumeResponse = await fetch('http://localhost:3001/api/save/resume-data', {
+            const resumeResponse = await fetch('/api/save/resume-data', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(resumeData)

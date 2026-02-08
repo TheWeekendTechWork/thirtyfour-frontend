@@ -24,14 +24,14 @@ export const DataProvider = ({ children }: { children: ReactNode }) => {
             setLoading(true);
 
             // Fetch Home Data
-            const homeRes = await fetch('http://localhost:3001/api/data/home');
+            const homeRes = await fetch('/api/data/home');
             if (homeRes.ok) {
                 const homeJson = await homeRes.json();
                 setHomeData(homeJson.record || homeJson); // Handle JSONBin structure
             }
 
             // Fetch Resume Data
-            const resumeRes = await fetch('http://localhost:3001/api/data/resume');
+            const resumeRes = await fetch('/api/data/resume');
             if (resumeRes.ok) {
                 const resumeJson = await resumeRes.json();
                 setResumeData(resumeJson.record || resumeJson);
