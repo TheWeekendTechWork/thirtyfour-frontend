@@ -86,33 +86,84 @@
     }
   ],
   "skills": {
-    "programming": ["Python", "JavaScript", "Java", "TypeScript"],
-    "backend": ["FastAPI", "Flask", "Django", "Node.js", "Express.js", "Spring Boot", "REST API", "GraphQL"],
-    "frontend": ["HTML5", "CSS3", "React", "Redux", "Angular", "Material UI", "Chakra UI"],
-    "database": ["PostgreSQL", "MySQL", "MongoDB", "Redis"],
-    "devops": ["Git", "Docker", "Kubernetes", "Jenkins", "CI/CD", "Ansible", "Helm Charts"],
-    "cloud": ["Azure", "AWS", "GCP", "OpenShift"],
-    "other": ["Linux", "Agile/Scrum"]
+    "programming": [
+      "Python",
+      "JavaScript",
+      "Java",
+      "TypeScript"
+    ],
+    "backend": [
+      "FastAPI",
+      "Flask",
+      "Django",
+      "Node.js",
+      "Express.js",
+      "Spring Boot",
+      "REST API",
+      "GraphQL"
+    ],
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "React",
+      "Redux",
+      "Angular",
+      "Material UI",
+      "Chakra UI"
+    ],
+    "database": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis"
+    ],
+    "devops": [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "CI/CD",
+      "Ansible",
+      "Helm Charts"
+    ],
+    "cloud": [
+      "Azure",
+      "AWS",
+      "GCP",
+      "OpenShift"
+    ],
+    "other": [
+      "Linux",
+      "Agile/Scrum"
+    ]
   },
   "projects": [
     {
       "id": 1,
       "name": "Hybrid Video Encryption Using AES and RSA",
       "description": "Developed a secure video encryption system combining AES and RSA algorithms for enhanced data protection and efficient key management.",
-      "technologies": ["Python", "Cryptography", "Security"]
+      "technologies": [
+        "Python",
+        "Cryptography",
+        "Security"
+      ]
     },
     {
       "id": 2,
       "name": "Python Automation Script",
       "description": "Created automation scripts to streamline repetitive tasks, improving team productivity and reducing manual effort by 60%.",
-      "technologies": ["Python", "Automation", "Scripting"]
+      "technologies": [
+        "Python",
+        "Automation",
+        "Scripting"
+      ]
     }
   ],
   "hobbies": [
     {
       "id": 1,
       "icon": "🎵",
-      "name": "Music Production & DJing"
+      "name": "Music"
     },
     {
       "id": 2,

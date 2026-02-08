@@ -14,7 +14,12 @@
         "id": 1,
         "title": "Quizda",
         "description": "A minimal quiz app to test your knowledge on various topics.",
-        "tags": ["Node.js", "Neon Postgres DB", "MongoDB", "React"],
+        "tags": [
+          "Node.js",
+          "Neon Postgres DB",
+          "MongoDB",
+          "React"
+        ],
         "imageUrl": "https://plus.unsplash.com/premium_photo-1679957333039-285fb913aa2b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=963",
         "status": "In Progress"
       },
@@ -22,15 +27,21 @@
         "id": 2,
         "title": "Track learning (tentative)",
         "description": "A centralized dashboard appliation to track the learning in a gamified environment.",
-        "tags": ["React", "FasAPI"],
+        "tags": [
+          "React",
+          "FasAPI"
+        ],
         "imageUrl": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=3139",
         "status": "Planning"
       },
       {
         "id": 3,
-        "title": "Unnamed App (tentative)",
-        "description": "Collaborative writing",
-        "tags": ["Unknown", "Unknown"],
+        "title": "Storyte (tentative)",
+        "description": "Collaborative Story writing",
+        "tags": [
+          "Unknown",
+          "Unknown"
+        ],
         "imageUrl": "https://plus.unsplash.com/premium_photo-1678103472974-a6435884b194?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1064",
         "status": "Coming Soon"
       }

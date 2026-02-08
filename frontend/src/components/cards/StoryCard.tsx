@@ -1,13 +1,10 @@
 import {
     Box,
-    HStack,
-    Badge,
-    Icon,
     Heading,
-    Image,
     Text,
+    Wrap,
+    WrapItem,
 } from "@chakra-ui/react";
-import { FaClock, FaBookOpen } from "react-icons/fa";
 
 // Type definition for Story
 export interface Story {
@@ -23,53 +20,115 @@ export interface Story {
 export const StoryCard: React.FC<{ story: Story }> = ({ story }) => {
     return (
         <Box
-            borderRadius="lg"
-            overflow="hidden"
-            bg="retroGreen.700"
-            transition="transform 0.3s"
-            _hover={{ transform: "translateY(-5px)" }}
-            boxShadow="md"
+            bg="retroGreen.100"
+            border="2px solid"
+            borderColor="retroGreen.800"
+            borderRadius="20px"
+            p={6}
+            transition="all 0.2s ease-out"
+            cursor="pointer"
+            _hover={{
+                transform: "translateY(-8px) scale(1.02)",
+                boxShadow: "12px 12px 0",
+                borderColor: "retroGreen.900",
+            }}
+            sx={{ _hover: { boxShadow: "12px 12px 0 var(--chakra-colors-retroGreen-900)" } }}
             display="flex"
             flexDirection="column"
             height="100%"
+            role="group"
         >
-            <Image
-                src={story.coverImage}
-                alt={story.title}
-                width="100%"
-                height="200px"
-                objectFit="cover"
-            />
-            <Box
-                p={5}
-                flex="1"
-                display="flex"
-                flexDirection="column"
-                justifyContent="space-between"
+            <Heading
+                as="h3"
+                size="md"
+                mb={3}
+                color="retroGreen.900"
+                fontFamily="'Courier New', monospace"
+                fontWeight="bold"
+                position="relative"
+                width="fit-content"
+                _after={{
+                    content: '""',
+                    position: "absolute",
+                    width: "0%",
+                    height: "2px",
+                    bottom: "-2px",
+                    left: "0",
+                    bg: "retroGreen.900",
+                    transition: "width 0.2s ease-out",
+                }}
+                _groupHover={{
+                    _after: {
+                        width: "100%",
+                    },
+                }}
             >
-                <Box>
-                    <HStack mb={2} flexWrap="wrap">
-                        <Badge colorScheme="orange">{story.genre}</Badge>
-                        <HStack spacing={1} color="retroGreen.200">
-                            <Icon as={FaClock} />
-                            <Text fontSize="xs">{story.readTime}</Text>
-                        </HStack>
-                    </HStack>
-                    <Heading as="h3" size="md" mb={2} color="retroGreen.100">
-                        {story.title}
-                    </Heading>
-                    <Text color="#FFF" mb={4} noOfLines={3}>
-                        {story.excerpt}
+                {story.title}
+            </Heading>
+            <Text
+                color="retroGreen.800"
+                mb={4}
+                fontFamily="'Courier New', monospace"
+                fontSize="sm"
+                lineHeight="1.6"
+                noOfLines={3}
+                flex="1"
+            >
+                {story.excerpt}
+            </Text>
+            <Wrap spacing={2} align="center">
+                <WrapItem>
+                    <Text
+                        color="retroGreen.700"
+                        fontFamily="'Courier New', monospace"
+                        fontSize="sm"
+                        fontWeight="medium"
+                        border="1px solid"
+                        borderColor="retroGreen.900"
+                        px={2}
+                        py={0.5}
+                        borderRadius="sm"
+                    >
+                        [{story.genre}]
                     </Text>
-                </Box>
-                <HStack justify="space-between" color="retroGreen.200" fontSize="sm">
-                    <HStack>
-                        <Icon as={FaBookOpen} />
-                        <Text>Coming soon</Text>
-                    </HStack>
-                    <Text>{story.releaseDate}</Text>
-                </HStack>
-            </Box>
+                </WrapItem>
+                <WrapItem>
+                    <Text color="retroGreen.700">|</Text>
+                </WrapItem>
+                <WrapItem>
+                    <Text
+                        color="retroGreen.700"
+                        fontFamily="'Courier New', monospace"
+                        fontSize="sm"
+                        fontWeight="medium"
+                        border="1px solid"
+                        borderColor="retroGreen.900"
+                        px={2}
+                        py={0.5}
+                        borderRadius="sm"
+                    >
+                        [{story.readTime}]
+                    </Text>
+                </WrapItem>
+                <WrapItem>
+                    <Text color="retroGreen.700">|</Text>
+                </WrapItem>
+                <WrapItem>
+                    <Text
+                        color="retroGreen.700"
+                        fontFamily="'Courier New', monospace"
+                        fontSize="sm"
+                        fontWeight="medium"
+                        border="1px solid"
+                        borderColor="retroGreen.900"
+                        px={2}
+                        py={0.5}
+                        borderRadius="sm"
+                    >
+                        [{story.releaseDate}]
+                    </Text>
+                </WrapItem>
+            </Wrap>
         </Box>
     );
 };
