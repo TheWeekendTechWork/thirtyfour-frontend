@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
     Box,
     Heading,
@@ -19,7 +20,8 @@ interface ContactCardProps {
         name: string;
         title: string;
         tagline: string;
-        profileImage: string;
+        profileImages: string[];
+        altProfileImage: string;
         contact: {
             email: string;
             phone: string;
@@ -31,6 +33,22 @@ interface ContactCardProps {
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+
+    useEffect(() => {
+        if (personalInfo.profileImages && personalInfo.profileImages.length > 1) {
+            const interval = setInterval(() => {
+                setCurrentImageIndex((prev) => (prev + 1) % personalInfo.profileImages.length);
+            }, 2000); // Cycle every 2 seconds for visibility
+            return () => clearInterval(interval);
+        }
+    }, [personalInfo.profileImages]);
+
+    const currentImage = isHovered
+        ? personalInfo.altProfileImage
+        : personalInfo.profileImages[currentImageIndex];
+
     return (
         <MotionCard
             as={Card}
@@ -71,14 +89,20 @@ const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
                 </Text>
 
                 <VStack spacing={5} align="center" mt={8}>
-                    <Box position="relative">
+                    <Box
+                        position="relative"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        cursor="pointer"
+                    >
                         <Image
                             borderRadius="full"
                             boxSize={{ base: "100px", md: "120px" }}
-                            src={personalInfo.profileImage}
+                            src={currentImage}
                             alt={personalInfo.name}
                             border="4px solid"
                             borderColor="retroGreen.500"
+                            transition="src 0.3s ease-in-out"
                         />
                         <Box
                             position="absolute"
