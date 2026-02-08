@@ -1,15 +1,4 @@
 services:
-  # FastAPI Backend
-  - type: web
-    name: thirtyfour-backend
-    runtime: python
-    buildCommand: pip install -r backend/requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.0
-    healthCheckPath: /health
-
   # Node.js Web Service (Serves API + React Static Files)
   - type: web
     name: thirtyfour-frontend
