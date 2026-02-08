@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     Box,
     Heading,
@@ -15,16 +15,12 @@ import {
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import MotionCard from "./MotionCard";
 
-import profileImage1 from '/images/jairam-profile-picture.jpeg';
-import profileImage2 from '/images/jairam-profile-picturee.jpeg';
-import altProfileImage from '/images/jairam-alt-avatar.jpeg';
-
 interface ContactCardProps {
     personalInfo: {
         name: string;
         title: string;
         tagline: string;
-        // Images are now handled internally
+        // Images are handled internally
         contact: {
             email: string;
             phone: string;
@@ -36,21 +32,13 @@ interface ContactCardProps {
 }
 
 const ContactCard: React.FC<ContactCardProps> = ({ personalInfo }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
-    const profileImages = [profileImage1, profileImage2];
+    // Direct static paths - simple and robust
+    const profileImage = "/images/jairam-profile-picture.jpeg";
+    const altProfileImage = "/images/jairam-alt-avatar.jpeg";
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % profileImages.length);
-        }, 2000); // Cycle every 2 seconds for visibility
-        return () => clearInterval(interval);
-    }, []);
-
-    const currentImage = isHovered
-        ? altProfileImage
-        : profileImages[currentImageIndex];
+    const currentImage = isHovered ? altProfileImage : profileImage;
 
     return (
         <MotionCard
